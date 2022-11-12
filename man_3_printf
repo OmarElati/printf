@@ -1,0 +1,86 @@
+.TH man 3 "25 jul 2021" "0.1" "_printf man page"
+
+.Sh NAME
+.B _print
+- print data according to specified format.
+
+.SH SYNOPSIS
+.B #include "holberton.h"
+.B int printf(const char *
+.RBformat
+.RB, ...);
+
+.SH DESCRIPTION
+.B _printf
+- The printf() function sends a formatted string to the standard output.This string can display formatted variables and special control characters.
+
+.SH Format
+.TP
+.BR c
+- This requires an argument of type int and prints it as a character which normally has a value between 0 to 255.
+
+.TP
+.BR s
+- This format specifier is implemented for representing strings. This is used in printf() function for printing a string stored in the character array variable. The const char * argument is expected to be a pointer to an array of character type (pointer to a string).
+
+.TP
+.BR b
+- The int argument is converted to a binary.
+
+.TP
+.BR d, i
+- The int argument is converted to signed decimal.
+
+.TP
+.BR r
+- Prints a string in reverse.
+
+.TP
+.BR R
+- Prints a string converted to rot13
+
+.TP
+.BR %
+- A  '%' is written.  No argument is converted.  The complete conversion specification is '%%'.
+
+.TP
+.BR u, o, x,X
+- The  unsigned  int  argument is converted to unsigned octal (o), unsigned decimal (u), or unsigned hexadecimal (x  and  X)  notation.   The  letters abcdef are used for x conversions; the let- ters ABCDEF are used for X conversions.
+
+.SH RETURN VALUE
+-  the number of characters printed (excluding the null byte used to end output to strings)
+
+.SH Example:
+To use the _printf function you simply need to compile all files .c including the header holberton.h with a main function.
+
+.B main.c
+#include "holberton.h"
+
+int main(void)
+   {
+		     _printf("let's print something using our function!");
+
+   return (0);
+    }
+
+.B Compilation:
+	   $ gcc *.c -o
+
+.B Output:
+let's print something using our function!
+
+.SH NOTES
+- Actualy, the program don't handle the flag characters, field width, precision nor the length modifiers.
+
+.SH SEE ALSO
+.BR man printf (3)
+
+.SH CREDITS
+.PP
+- This man page is created as a project to recreate the C standard ibrary pintf for Holberton school.
+<https://www.holbertonschool.com/tn/en>
+
+.SH AUTHORS
+Med Lazher hedfi <https://github.com/Lazherhedfi>
+Elati Omar <https://github.com/OmarElati>
+
