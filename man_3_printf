@@ -5,7 +5,7 @@
 - print data according to specified format.
 
 .SH SYNOPSIS
-.B #include "holberton.h"
+.B #include "main.h"
 .B int printf(const char *
 .RBformat
 .RB, ...);
